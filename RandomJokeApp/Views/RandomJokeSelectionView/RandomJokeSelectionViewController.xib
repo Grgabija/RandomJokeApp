@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RandomJokeSelectionViewController" customModule="RandomJokeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="randomChuckNorrisJokeButton" destination="diP-X7-vLy" id="AyL-Z2-98x"/>
+                <outlet property="randomDadJokeButton" destination="K6H-ff-tHs" id="2af-oS-FKd"/>
+                <outlet property="randomJokeSelectionGuidelines" destination="kNq-fs-YJC" id="5uD-GX-7TK"/>
+                <outlet property="randomJokeSelectionTitle" destination="ROc-N5-Ak6" id="efo-Oa-vy0"/>
+                <outlet property="view" destination="iN0-l3-epB" id="v2N-Z4-kY8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diP-X7-vLy">
+                    <rect key="frame" x="20" y="301" width="374" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="SeR-Ef-I67"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                    <connections>
+                        <action selector="showRandomChuckNorrisJoke:" destination="-1" eventType="touchUpInside" id="fg1-Cs-Wdp"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROc-N5-Ak6">
+                    <rect key="frame" x="20" y="144" width="374" height="76"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="76" id="aZh-JI-5le"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNq-fs-YJC">
+                    <rect key="frame" x="20" y="240" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6H-ff-tHs">
+                    <rect key="frame" x="20" y="371" width="374" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="UT2-NL-LRU"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                    <connections>
+                        <action selector="showRandomDadJoke:" destination="-1" eventType="touchUpInside" id="9cr-am-XTN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="K6H-ff-tHs" firstAttribute="top" secondItem="diP-X7-vLy" secondAttribute="bottom" constant="20" id="0Ne-Vp-nEs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ROc-N5-Ak6" secondAttribute="trailing" constant="20" id="85e-Vg-Dt8"/>
+                <constraint firstItem="diP-X7-vLy" firstAttribute="top" secondItem="kNq-fs-YJC" secondAttribute="bottom" constant="40" id="ATw-8F-9qY"/>
+                <constraint firstItem="kNq-fs-YJC" firstAttribute="top" secondItem="ROc-N5-Ak6" secondAttribute="bottom" constant="20" id="Ia3-UV-1uF"/>
+                <constraint firstItem="kNq-fs-YJC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="MTm-kj-g2e"/>
+                <constraint firstItem="ROc-N5-Ak6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="TJd-qe-nv8"/>
+                <constraint firstItem="K6H-ff-tHs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="e5c-Gf-0Ri"/>
+                <constraint firstItem="diP-X7-vLy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="jZJ-Qh-zk8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kNq-fs-YJC" secondAttribute="trailing" constant="20" id="ljT-Kq-nHe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="K6H-ff-tHs" secondAttribute="trailing" constant="20" id="x0I-tJ-egz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="diP-X7-vLy" secondAttribute="trailing" constant="20" id="xEe-O4-ZEw"/>
+                <constraint firstItem="ROc-N5-Ak6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="100" id="yw0-AG-ojv"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="110"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
