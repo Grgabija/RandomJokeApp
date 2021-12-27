@@ -11,6 +11,9 @@
 		963D8D22277243EE0011FD69 /* BaseUIViewController.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D8D21277243EE0011FD69 /* BaseUIViewController.swift.swift */; };
 		963D8D24277250500011FD69 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D8D23277250500011FD69 /* String+Helpers.swift */; };
 		963D8D272772557A0011FD69 /* UIViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D8D262772557A0011FD69 /* UIViewController+Helpers.swift */; };
+		963D8D2B27725F5F0011FD69 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D8D2A27725F5F0011FD69 /* Networking.swift */; };
+		963D8D2E277276D60011FD69 /* RandomChuckNorrisJokeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D8D2D277276D60011FD69 /* RandomChuckNorrisJokeResponse.swift */; };
+		963D8D3027727A900011FD69 /* RandomDadJokeResponse.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D8D2F27727A900011FD69 /* RandomDadJokeResponse.swift.swift */; };
 		96A8E9E62771046C00F68C13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8E9E52771046C00F68C13 /* AppDelegate.swift */; };
 		96A8E9E82771046C00F68C13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8E9E72771046C00F68C13 /* SceneDelegate.swift */; };
 		96A8E9EF2771046E00F68C13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A8E9EE2771046E00F68C13 /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 		963D8D21277243EE0011FD69 /* BaseUIViewController.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift.swift; sourceTree = "<group>"; };
 		963D8D23277250500011FD69 /* String+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
 		963D8D262772557A0011FD69 /* UIViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helpers.swift"; sourceTree = "<group>"; };
+		963D8D2A27725F5F0011FD69 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		963D8D2D277276D60011FD69 /* RandomChuckNorrisJokeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomChuckNorrisJokeResponse.swift; sourceTree = "<group>"; };
+		963D8D2F27727A900011FD69 /* RandomDadJokeResponse.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDadJokeResponse.swift.swift; sourceTree = "<group>"; };
 		96A8E9E22771046C00F68C13 /* RandomJokeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomJokeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A8E9E52771046C00F68C13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96A8E9E72771046C00F68C13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +115,8 @@
 		963D8D1F277243670011FD69 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				963D8D2C2772767F0011FD69 /* DataEntities */,
+				963D8D2827725F3E0011FD69 /* Network */,
 				963D8D252772505C0011FD69 /* Base */,
 				963D8D20277243710011FD69 /* Extensions+Helpers */,
 			);
@@ -130,6 +138,23 @@
 				963D8D21277243EE0011FD69 /* BaseUIViewController.swift.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		963D8D2827725F3E0011FD69 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				963D8D2A27725F5F0011FD69 /* Networking.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		963D8D2C2772767F0011FD69 /* DataEntities */ = {
+			isa = PBXGroup;
+			children = (
+				963D8D2D277276D60011FD69 /* RandomChuckNorrisJokeResponse.swift */,
+				963D8D2F27727A900011FD69 /* RandomDadJokeResponse.swift.swift */,
+			);
+			path = DataEntities;
 			sourceTree = "<group>";
 		};
 		96A8E9D92771046C00F68C13 = {
@@ -413,10 +438,13 @@
 			files = (
 				963D8D24277250500011FD69 /* String+Helpers.swift in Sources */,
 				963D8D272772557A0011FD69 /* UIViewController+Helpers.swift in Sources */,
+				963D8D2E277276D60011FD69 /* RandomChuckNorrisJokeResponse.swift in Sources */,
 				96A8E9E62771046C00F68C13 /* AppDelegate.swift in Sources */,
 				96A8EA212771229300F68C13 /* RandomJokeSelectionViewController.swift in Sources */,
 				96A8E9E82771046C00F68C13 /* SceneDelegate.swift in Sources */,
 				963D8D22277243EE0011FD69 /* BaseUIViewController.swift.swift in Sources */,
+				963D8D3027727A900011FD69 /* RandomDadJokeResponse.swift.swift in Sources */,
+				963D8D2B27725F5F0011FD69 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

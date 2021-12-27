@@ -41,15 +41,24 @@ class RandomJokeSelectionViewController: BaseUIViewController {
     // MARK: - Actions
     
     @IBAction func showRandomChuckNorrisJoke(_ sender: Any) {
+        Networking.sharedInstance.getRandomChuckNorrisJoke()
+            .done { json -> Void in
+                  print(json)
+              }
+              .catch { error in
+                  print(error.localizedDescription)
+              }
+#warning("implement navigation to joke preview")
     }
     
     @IBAction func showRandomDadJoke(_ sender: Any) {
+        Networking.sharedInstance.getRandomDadJoke()
+            .done { json -> Void in
+                  print(json)
+              }
+              .catch { error in
+                  print(error.localizedDescription)
+              }
+#warning("implement navigation to joke preview")
     }
-}
-
-// MARK: - Private functionality
-
-private extension RandomJokeSelectionViewController {
-    
-    
 }
