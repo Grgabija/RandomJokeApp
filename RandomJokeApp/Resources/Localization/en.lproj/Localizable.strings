@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  RandomJokeApp
+
+  Created by Gabija on 2021-12-20.
+  
+*/
+
+"landingScreen.label.title" = "Random Joke App";
+"landingScreen.label.description" = "Select your random joke";
+"landingScreen.button.randomChuckNorrisJokeButtonTitle" = "Show random Chuck Norris joke";
+"landingScreen.button.randomDadJokeButtonTitle" = "Show random dad joke";
