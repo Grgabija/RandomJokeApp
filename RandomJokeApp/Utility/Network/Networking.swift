@@ -11,6 +11,7 @@ import PromiseKit
 class Networking {
     
     //MARK: - Network & Singleton
+    
     static let baseChuckNorrisJokesURL = "https://api.chucknorris.io"
     static let baseDadJokesURL = "https://icanhazdadjoke.com"
     
@@ -18,6 +19,7 @@ class Networking {
     private init() {}
     
     //MARK: - Constants
+    
     private let ContentType = ["application/json"]
     private let Headers: HTTPHeaders = ["Accept": "application/json"]
     

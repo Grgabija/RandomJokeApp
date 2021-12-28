@@ -23,13 +23,13 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diP-X7-vLy">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diP-X7-vLy">
                     <rect key="frame" x="20" y="301" width="374" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="SeR-Ef-I67"/>
                     </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
                     <connections>
                         <action selector="showRandomChuckNorrisJoke:" destination="-1" eventType="touchUpInside" id="fg1-Cs-Wdp"/>
                     </connections>
@@ -49,13 +49,13 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6H-ff-tHs">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6H-ff-tHs">
                     <rect key="frame" x="20" y="371" width="374" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="UT2-NL-LRU"/>
                     </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
                     <connections>
                         <action selector="showRandomDadJoke:" destination="-1" eventType="touchUpInside" id="9cr-am-XTN"/>
                     </connections>
