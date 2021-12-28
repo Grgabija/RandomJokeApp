@@ -10,6 +10,5 @@ target 'RandomJokeApp' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'Alamofire', '~> 5.5'
   pod 'PromiseKit', '~> 6.8'
-  pod 'Swinject', '~> 2.8'
 
 end

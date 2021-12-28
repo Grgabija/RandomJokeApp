@@ -22,6 +22,14 @@ class RandomJokeSelectionViewController: BaseUIViewController {
     private let TitleFontSize = 36.0
     private let ButtonCornerRadius = 5.0
     
+    // MARK: - ViewModel
+    
+    lazy var viewModel: RandomJokeSelectionViewModel = {
+        let viewModel = RandomJokeSelectionViewModel()
+        viewModel.delegate = self
+        return viewModel
+    }()
+    
     // MARK: - Parent class functionality
     
     override func setTheme() {
@@ -52,23 +60,11 @@ class RandomJokeSelectionViewController: BaseUIViewController {
     // MARK: - Actions
     
     @IBAction func showRandomChuckNorrisJoke(_ sender: Any) {
-        Networking.sharedInstance.getRandomChuckNorrisJoke()
-            .done { response in
-                self.navigateToRandomJokeViewController(response.joke, sender: self.randomChuckNorrisJokeButton)
-            }
-            .catch { error in
-                self.showAlert(errorMessage: error.localizedDescription)
-            }
+        viewModel.didTapChuckNorrisJokeButton()
     }
     
     @IBAction func showRandomDadJoke(_ sender: Any) {
-        Networking.sharedInstance.getRandomDadJoke()
-            .done { response in
-                self.navigateToRandomJokeViewController(response.joke, sender: self.randomDadJokeButton)
-            }
-            .catch { error in
-                self.showAlert(errorMessage: error.localizedDescription)
-            }
+        viewModel.didTapDadJokeButton()
     }
 }
 
@@ -92,11 +88,27 @@ private extension RandomJokeSelectionViewController {
         navigationController?.pushViewController(randomJokeViewController, animated: true)
     }
     
-    func showAlert(errorMessage: String) {
-        let alert = UIAlertController(title: "general.error".localized, message: errorMessage, preferredStyle: .alert)
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "general.error".localized, message: message, preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "general.ok".localized, style: .cancel))
         
         self.present(alert, animated: true)
+    }
+}
+
+// MARK: - RandomJokeSelectionViewModelDelegate
+
+extension RandomJokeSelectionViewController: RandomJokeSelectionViewModelDelegate {
+    func didResponseSucceededWithChuchNorrisJoke(_ joke: String) {
+        navigateToRandomJokeViewController(joke, sender: randomChuckNorrisJokeButton)
+    }
+    
+    func didResponseSucceededWithDadJoke(_ joke: String) {
+        navigateToRandomJokeViewController(joke, sender: randomDadJokeButton)
+    }
+    
+    func didErrorOccured(errorMessage: String) {
+        showAlert(message: errorMessage)
     }
 }
