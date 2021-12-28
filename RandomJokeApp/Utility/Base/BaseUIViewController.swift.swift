@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import SnapKit
 
 class BaseUIViewController: UIViewController {
     
     // MARK: - Lifecycle
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         setTheme()
         localization()
@@ -26,5 +27,8 @@ class BaseUIViewController: UIViewController {
     
     func setTheme() {
         view.backgroundColor = .white
+        
+#warning("Fix navigation bar + status bar on iOS 15 with UINavigationBarAppearance()")
+        navigationController?.navigationBar.backgroundColor = .clear
     }
 }

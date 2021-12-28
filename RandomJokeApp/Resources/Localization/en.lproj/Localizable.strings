@@ -10,3 +10,7 @@
 "landingScreen.label.description" = "Select your random joke";
 "landingScreen.button.randomChuckNorrisJokeButtonTitle" = "Show random Chuck Norris joke";
 "landingScreen.button.randomDadJokeButtonTitle" = "Show random dad joke";
+"navigationBar.navigationItemTitleWhenNavigatingToChuckNorrisJoke" = "Here's your Chuck Norris joke";
+"navigationBar.navigationItemTitleWhenNavigatingToDadJoke" = "Here's your dad joke";
+"general.ok" = "OK";
+"general.error" = "Error has occured";
