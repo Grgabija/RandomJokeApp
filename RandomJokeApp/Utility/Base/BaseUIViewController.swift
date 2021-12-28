@@ -1,5 +1,5 @@
 //
-//  BaseUIViewController.swift.swift
+//  BaseUIViewController.swift
 //  RandomJokeApp
 //
 //  Created by Gabija on 2021-12-21.
